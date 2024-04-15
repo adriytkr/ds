@@ -4,14 +4,12 @@ public class Ex06{
   public static void main(String args[]){
     Scanner scanner = new Scanner(System.in);
 
-    int index = 0;
     int[] numbers = new int[10];
 
-    while(index < 10){
+    for(int x = 0; x < 10; x++){
       System.out.print("Digite um numero: ");
       int number = scanner.nextInt();
-      numbers[index] = number;
-      index++;
+      numbers[x] = number;
     }
 
     int highestNumberIndex = 0;
@@ -27,6 +25,9 @@ public class Ex06{
       numbers[x] = numbers[highestNumberIndex];
       numbers[highestNumberIndex] = temp;
     }
+
+    // 3 5 17 25 -1
+    // 25 17 5 3 -1
 
     System.out.println(numbers[0]);
     System.out.println(numbers[1]);
